@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, WebVR! • A-Frame</title>
+    <meta name="description" content="Hello, WebVR! • A-Frame">
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene fog="type: exponential; density: 0.00005; color: #fff;">
+      <a-assets>
+    <video id="bg" autoplay loop="true" src="https://cdn.glitch.com/953b1db6-2a2c-4a22-a5d8-a41f9afee1df%2F360%20VR%20Video%20-%20Stars.mp4?1539521774470"> </video>
+    <img id="sun" src="https://cdn.glitch.com/953b1db6-2a2c-4a22-a5d8-a41f9afee1df%2Fsun.jpg?1539522504902">
+        <img id="earth" src="https://cdn.glitch.com/953b1db6-2a2c-4a22-a5d8-a41f9afee1df%2Fearth.jpg?1539522744533">
+         <img id="venus" src="https://cdn.glitch.com/953b1db6-2a2c-4a22-a5d8-a41f9afee1df%2Fvenus.jpg?1539522968848">
+        <img id="saturn" src="https://cdn.glitch.com/953b1db6-2a2c-4a22-a5d8-a41f9afee1df%2Fsaturn.jpg?1539523089355">
+        <img id="texture" src="https://cdn.glitch.com/953b1db6-2a2c-4a22-a5d8-a41f9afee1df%2Fsaturnring.jpg?1539523288615">
+         <img id="jupiter" src="https://cdn.glitch.com/953b1db6-2a2c-4a22-a5d8-a41f9afee1df%2Fjupiter.jpg?1539523605802">
+         <img id="mars" src="https://cdn.glitch.com/953b1db6-2a2c-4a22-a5d8-a41f9afee1df%2Fmars.jpg?1539523743045">
+         <img id="sm" src="https://cdn.glitch.com/953b1db6-2a2c-4a22-a5d8-a41f9afee1df%2Fmercury.jpg?1539523878991">
+  </a-assets>
+     <a-videosphere src="#bg"></a-videosphere>
+
+      <a-entity camera="active: true" look-controls wasd-controls position="0 0 25" data-aframe-default-camera></a-entity>
+      <a-sphere position="-29 4 3" radius="2" src="#saturn"></a-sphere>saturn
+      <a-sphere id="sunid" position="0 4 -3" radius="8"   src="#sun"></a-sphere>sun
+      <a-sphere position="-13 4 -3" radius="1.2" src="#sm"></a-sphere>mars
+      <a-sphere position="-23 4 -3" radius="4" src="#jupiter"></a-sphere>jupiter
+      <a-sphere position="41 4 -3" radius="3" src="#earth"></a-sphere>earth
+      <a-sphere position="28 4 -3" radius="3"  src="#venus"></a-sphere>venus
+      <a-ring  position="-29 4 3" width="10" radius-inner="2" radius-outer="3" rotation="90 30 45" src="#texture" ></a-ring>
+      <a-sphere position="15 4 0" radius="1.25" src="#mars"></a-sphere>mercury
+    </a-scene>
+  </body>
+</html>
